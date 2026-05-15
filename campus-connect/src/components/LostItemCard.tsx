@@ -12,9 +12,9 @@ const LostItemCard = ({ item, onClick }: LostItemCardProps) => {
       className="group cursor-pointer overflow-hidden rounded-xl border bg-card shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
     >
       <div className="aspect-[4/3] overflow-hidden bg-muted">
-        {item.image ? (
+        {item.imageUrl ? (
           <img
-            src={item.image}
+            src={item.imageUrl}
             alt={item.name}
             className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />
@@ -30,10 +30,10 @@ const LostItemCard = ({ item, onClick }: LostItemCardProps) => {
           </span>
         </div>
         <p className="flex items-center gap-1 text-sm text-muted-foreground">
-          📍 {item.location}
+          📍 {item.locationFound}
         </p>
         <p className="text-xs text-muted-foreground">
-          {new Date(item.date).toLocaleDateString()}
+          {new Date(item.createdAt).toLocaleDateString()}
         </p>
         <button
           onClick={(e) => {

@@ -1,11 +1,11 @@
 export interface LostItem {
-  id: string;
+  _id: string;
   name: string;
   category: string;
-  location: string;
+  locationFound: string;
   description: string;
-  image: string;
-  date: string;
+  imageUrl: string;
+  createdAt: string;
   uploadedBy: {
     id: string;
     name: string;

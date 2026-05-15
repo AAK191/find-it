@@ -26,7 +26,7 @@ const UploadModal = ({ open, onClose, onUploaded }: UploadModalProps) => {
       const fd = new FormData();
       fd.append("name", form.name);
       fd.append("category", form.category);
-      fd.append("location", form.location);
+      fd.append("locationFound", form.location);
       fd.append("description", form.description);
       if (image) fd.append("image", image);
 

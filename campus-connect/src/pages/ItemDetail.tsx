@@ -70,8 +70,8 @@ const ItemDetail = () => {
         <div className="overflow-hidden rounded-xl border bg-card shadow-sm md:flex">
           {/* Image */}
           <div className="aspect-square bg-muted md:w-1/2">
-            {item.image ? (
-              <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+            {item.imageUrl ? (
+              <img src={item.imageUrl} alt={item.name} className="h-full w-full object-cover" />
             ) : (
               <div className="flex h-full items-center justify-center text-6xl text-muted-foreground">📦</div>
             )}
@@ -87,8 +87,8 @@ const ItemDetail = () => {
             <h2 className="font-display text-2xl font-bold text-card-foreground">{item.name}</h2>
             <p className="text-muted-foreground">{item.description || "No description provided."}</p>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>📍 <span className="font-medium text-card-foreground">{item.location}</span></p>
-              <p>📅 {new Date(item.date).toLocaleDateString()}</p>
+              <p>📍 <span className="font-medium text-card-foreground">{item.locationFound}</span></p>
+              <p>📅 {new Date(item.createdAt).toLocaleDateString()}</p>
               <p>👤 Found by <span className="font-medium text-card-foreground">{item.uploadedBy?.name || "Unknown"}</span></p>
             </div>
 

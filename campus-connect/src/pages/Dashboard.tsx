@@ -36,7 +36,7 @@ const Dashboard = () => {
       (i) =>
         i.name.toLowerCase().includes(q) ||
         i.category.toLowerCase().includes(q) ||
-        i.location.toLowerCase().includes(q)
+        i.locationFound.toLowerCase().includes(q)
     );
   }, [items, search]);
 
@@ -85,7 +85,7 @@ const Dashboard = () => {
         ) : (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filtered.map((item) => (
-              <LostItemCard key={item.id} item={item} onClick={() => navigate(`/item/${item.id}`)} />
+              <LostItemCard key={item._id} item={item} onClick={() => navigate(`/item/${item._id}`)} />
             ))}
           </div>
         )}
